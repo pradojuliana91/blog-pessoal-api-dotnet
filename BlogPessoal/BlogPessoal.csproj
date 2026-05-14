@@ -26,8 +26,6 @@
     <Folder Include="Middlewares\" />
     <Folder Include="Config\" />
     <Folder Include="DTOs\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
