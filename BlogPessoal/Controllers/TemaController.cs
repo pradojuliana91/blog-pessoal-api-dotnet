@@ -59,6 +59,7 @@ namespace BlogPessoal.Controllers
                 return BadRequest();
             }
             var temaExistente = await _temaService.BuscarPorIdAsync(id);
+
             if (temaExistente == null)
             {
                 return NotFound();

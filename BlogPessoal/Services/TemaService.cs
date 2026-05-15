@@ -24,6 +24,15 @@ namespace BlogPessoal.Services
 
         public async Task AdicionarTemaAsync(Tema tema)
         {
+            var temas = await _temaRepository.BuscarTodosAsync();
+
+            bool existeTema = temas.Any(t => t.Descricao.ToLower() == tema.Descricao.ToLower());
+
+            if (existeTema)
+            {
+                throw new ArgumentException("Tema já existe.");
+            }
+
             await _temaRepository.AdicionarTemaAsync(tema);
         }
 
